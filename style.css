@@ -1,0 +1,330 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #f0f2f5;
+    color: #333;
+  }
+  
+  /* Navbar */
+  nav {
+    background: #1e1f26;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffc107;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: white;
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text span {
+    color: #ffc107;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    max-width: 500px;
+  }
+  
+  .qr-container {
+    text-align: center;
+  }
+  
+  .qr-container img {
+    margin-top: 1rem;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  
+  /* About Section */
+  #about {
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  #about .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #1e1f26;
+  }
+  
+  #about .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  #about .about-content p {
+    margin-bottom: 1.5rem;
+  }
+  
+  #about .about-content p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 3rem 2rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #1e1f26;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-left: 6px solid #0072ff;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 0.5rem;
+    color: #0072ff;
+  }
+  
+  .service-card p {
+    color: #555;
+    line-height: 1.4;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  }
+  
+  /* Garages Section */
+  .garages {
+    padding: 3rem 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .garage-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .garage-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #00c6ff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .garage-card h3 {
+    color: #0072ff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .garage-card p {
+    color: #444;
+    font-size: 0.95rem;
+  }
+  
+  .garage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Footer */
+  footer {
+    background: #1e1f26;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  /* Media Queries for Mobile and Tablet */
+  @media (max-width: 768px) {
+  
+    /* Navbar */
+    nav {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+  
+    .nav-links {
+      display: block;
+      margin-top: 1.5rem;
+    }
+  
+    .nav-links a {
+      display: block;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    /* Hero Section */
+    .hero {
+      flex-direction: column;
+      padding: 2rem;
+      text-align: center;
+    }
+  
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+  
+    .qr-container img {
+      width: 150px;
+    }
+  
+    /* About Section */
+    #about .section-title {
+      font-size: 1.5rem;
+    }
+  
+    #about .about-content {
+      font-size: 1rem;
+    }
+  
+    /* Services Section */
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .service-card {
+      padding: 1.2rem;
+    }
+  
+    .service-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .service-card p {
+      font-size: 0.9rem;
+    }
+  
+    /* Garages Section */
+    .garage-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .garage-card {
+      padding: 1rem;
+    }
+  
+    .garage-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .garage-card p {
+      font-size: 0.9rem;
+    }
+  
+    /* Footer */
+    footer {
+      padding: 1.5rem;
+    }
+  }
+  
+  /* Media Queries for Mobile */
+  @media (max-width: 480px) {
+  
+    /* Hero Section */
+    .hero-text h1 {
+      font-size: 1.6rem;
+    }
+  
+    .hero-text p {
+      font-size: 0.9rem;
+    }
+  
+    /* About Section */
+    #about .section-title {
+      font-size: 1.3rem;
+    }
+  
+    #about .about-content {
+      font-size: 0.95rem;
+    }
+  
+    /* Services Section */
+    .service-card {
+      padding: 1rem;
+    }
+  
+    .service-card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .service-card p {
+      font-size: 0.85rem;
+    }
+  
+    /* Footer */
+    footer {
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+  }
+  
