@@ -1,195 +1,182 @@
-/* Global styles */
-body {
+/* Reset & Base Styles */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
-  background: #f9f9f9;
+  line-height: 1.6;
+  background-color: #f9f9f9;
   color: #333;
-}
-
-h1, h2, h3 {
-  margin: 0.5em 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 /* Navbar */
 nav {
+  background-color: #222;
+  color: #fff;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #111;
-  color: white;
-  padding: 10px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  flex-wrap: wrap;
 }
 
-nav .logo {
-  font-size: 1.5rem;
+.logo {
+  font-size: 20px;
   font-weight: bold;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
 .nav-links li a {
   color: white;
+  text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #f39c12;
+  text-decoration: underline;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
-  background: #e9f5ff;
-  padding: 40px 20px;
+  background-color: #ffffff;
+  padding: 30px 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
-.hero-text h1 {
-  font-size: 2.2rem;
-  color: #222;
-}
-
-.hero-text span {
+.hero-text h1 span {
   color: #007BFF;
-  font-weight: 600;
 }
 
 .hero-text p {
-  font-size: 1.1rem;
-  color: #555;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
+/* QR Container */
 .qr-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.qr-item a {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.qr-item a:hover {
+  background-color: #0056b3;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.qr-container img {
-  margin-top: 10px;
-  width: 120px;
-}
-
-/* Image Grid */
-.image-grid {
+/* Services, Garages, Vehicles */
+.services-list,
+.garage-list,
+.vehicle-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);  /* Creates 7 equal columns */
-  gap: 20px;  /* Space between images */
-  padding: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.image-grid img {
+.service-card,
+.garage-card,
+.vehicle-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Vehicles Section (Photos) */
+.vehicle-grid img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  object-fit: cover;  /* Ensures images fill their space without distortion */
-}
-
-
-/* Section titles */
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-/* Services */
-.services {
-  padding: 40px 20px;
-  background: #f1f1f1;
-}
-
-.services-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.service-card {
-  background: #fff;
-  padding: 20px;
-  border-left: 5px solid #007BFF;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.service-card h3 {
-  margin-bottom: 10px;
-  color: #007BFF;
-}
-
-/* Garages */
-.garages {
-  padding: 40px 20px;
-  background: #fff;
-}
-
-.garage-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.garage-card {
-  background: #f9f9f9;
-  padding: 20px;
-  border-left: 5px solid #f39c12;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Rentals */
-.rentals {
-  padding: 40px 20px;
-  background: #f5faff;
+  object-fit: cover;
 }
 
 .vehicle-category {
   margin-bottom: 40px;
 }
 
-.vehicle-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+.vehicle-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
 }
 
-.vehicle-card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 6px;
-  border-left: 4px solid #28a745;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .hero {
+  nav {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .hero-text {
-    margin-left: 0;
-    margin-top: 20px;
+    margin: 0;
   }
 
   .qr-container {
-    margin-left: 0;
-    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .vehicle-card, .service-card, .garage-card {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .qr-item a {
+    padding: 8px 15px;
+    font-size: 14px;
   }
 }
